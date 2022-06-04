@@ -25,7 +25,7 @@ int main()
         std::cout << myArray[k] << " ";
     }
     std::cout << "}" << std::endl;
-
+  
     for (int k = 0; k < sizeArray; k++)
     {
         for (int p = k + 1; p < sizeArray; p++)
@@ -47,6 +47,8 @@ int main()
         std::cout << myArray[k] << " ";
     }
     std::cout << "}";
+
+
 
     return 0;
 }
