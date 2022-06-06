@@ -9,7 +9,7 @@ void main()
 	srand(time(0));
 	int const size = 4;
 	int array[size];
-	cout << "введите массив:" << endl;
+	cout << "intput array :" << endl;
 	
 	
 		for (int i = 0;i < size;i++)
@@ -32,6 +32,6 @@ void main()
 			cout << array[i] << " ";
 		}
 		cout << endl;
-		cout << "Для доступа к первому элементу перейдите по этому указателю" <<*(array+1)<< endl;
+		cout << "To access the first element, go to this pointer " <<*(array+1)<< endl;
 
 }
