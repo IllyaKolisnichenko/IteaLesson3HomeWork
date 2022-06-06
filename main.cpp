@@ -1,13 +1,16 @@
-#include "header.h"
+#include <iostream>
+
+void bubbleSort(int arr[], int size);
 
 int main() {
-    int numbersArray[10]{};
+    const int size = 10;
+    int numbersArray[size]{};
 
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < size; i++){
         std::cin >> numbersArray[i];
     }
-    bubbleSort(numbersArray, 10);
-    for(int j = 0; j < 10; j++){
+    bubbleSort(numbersArray, size);
+    for(int j = 0; j < size; j++){
         std::cout << numbersArray[j];
     }
     return 0;
