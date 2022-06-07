@@ -5,21 +5,18 @@
 using namespace std;
 void main()
 {
-	setlocale(LC_ALL, "");
+	//setlocale(LC_ALL, "");
 	srand(time(0));
 	int const size = 10;
 	int array[size];
-	int mass = 0;
 	cout << "intput array :" << endl;
 	
 	
 	for (int i = 0;i < size;i++)
-		cin >> array[i];
-		
+		array = array[i];
 			cin >> *(array+1);
 
 		
-		//cout << endl;
 		for (int i = 0;i < size;i++)
 		{
 			for (int j = size - 1;j > i;j--)
