@@ -23,37 +23,23 @@ int main()
     }
     std::cout << "}" << std::endl;
 
-    int lenBetw2Elem = sizeArray / 1.27;
-    while (lenBetw2Elem != 1)
+    int lenBetw2Elem = sizeArray / 1.247;
+    int firstElement = 0;
+    while (lenBetw2Elem >= 1)
     {
-
-        for (int k = lenBetw2Elem; k < sizeArray; k++)
-        {
-            for (int p = lenBetw2Elem + 1; p < sizeArray; p++)
-            {
-                if (myArray[k] > myArray[p])
-                {
-                    int tempArray{};
-                    tempArray = myArray[k];
-                    myArray[k] = myArray[p];
-                    myArray[p] = tempArray;
-                }
-            }
-        }
-        for (int k = 0; k < sizeArray - lenBetw2Elem; k++)
-        {
-            for (int p = k + 1; p < sizeArray - lenBetw2Elem; p++)
+            
+            for (int p = firstElement; p < sizeArray - lenBetw2Elem; p++)
             {
 
-                if (myArray[k] > myArray[p])
+                if (myArray[firstElement+p] > myArray[lenBetw2Elem+p])
                 {
                     int tempArray{};
-                    tempArray = myArray[k];
-                    myArray[k] = myArray[p];
-                    myArray[p] = tempArray;
+                    tempArray = myArray[firstElement+p];
+                    myArray[firstElement+p] = myArray[lenBetw2Elem + p];
+                    myArray[lenBetw2Elem + p] = tempArray;
                 }
             }
-        }
+        
         lenBetw2Elem /= 1.27;
     }
 
