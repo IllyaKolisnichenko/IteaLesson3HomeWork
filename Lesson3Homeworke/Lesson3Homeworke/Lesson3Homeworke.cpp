@@ -34,9 +34,9 @@ int main()
                 if (myArray[firstElement+p] > myArray[lenBetw2Elem+p])
                 {
                     int tempArray{};
-                    tempArray = myArray[firstElement+p];
-                    myArray[firstElement+p] = myArray[lenBetw2Elem + p];
-                    myArray[lenBetw2Elem + p] = tempArray;
+                    tempArray = *(myArray+(firstElement+p));
+                    *(myArray+(firstElement+p)) = *(myArray+(lenBetw2Elem + p));
+                    *(myArray+(lenBetw2Elem + p)) = tempArray;
                 }
             }
         
@@ -46,7 +46,7 @@ int main()
     std::cout << "You've got sorted array by brush method : {";
     for (int k = 0; k < sizeArray; k++)
     {
-        std::cout << myArray[k] << " ";
+        std::cout << *(myArray+k) << " ";
     }
     std::cout << "}";
 
